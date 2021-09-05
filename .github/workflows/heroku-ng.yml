@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Testing
-        run: npm test
+        run: npm i && npm build && npm test
       
   build:
     needs: test
