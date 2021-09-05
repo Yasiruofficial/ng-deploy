@@ -10,8 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Testing
-        run: npm i && npm build && npm test
+      - name: setup
+        run: npm i
+      - name: Build
+        run: npm build
+      - name: Test
+        run: npm test
       
   build:
     needs: test
