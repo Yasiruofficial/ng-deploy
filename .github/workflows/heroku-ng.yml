@@ -6,17 +6,7 @@ on:
       - dev
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: setup
-        run: npm i
-      - name: Build
-        run: npm run build --prod
-      - name: Test
-        run: npm test
-      
+
   build:
     needs: test
     runs-on: ubuntu-latest
